@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /systems/omega
+# catalog-date 2009-11-09 23:44:56 +0100
+# catalog-license gpl
+# catalog-version undef
 Name:		texlive-omega
 Version:	20091109
 Release:	1
@@ -387,6 +393,7 @@ developing Omega (and Aleph) ideas include Omega-2 and LuaTeX.
 %doc %{_texmfdistdir}/doc/omega/base/doc-1.8.tex
 %doc %{_texmfdistdir}/doc/omega/base/torture.ps
 %doc %{_texmfdistdir}/doc/omega/base/torture.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -397,3 +404,5 @@ developing Omega (and Aleph) ideas include Omega-2 and LuaTeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips fonts omega tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
