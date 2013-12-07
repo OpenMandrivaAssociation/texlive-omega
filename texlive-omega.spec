@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-omega
 Version:	20091109
-Release:	3
+Release:	4
 Summary:	A wide-character-set extension of TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/omega
