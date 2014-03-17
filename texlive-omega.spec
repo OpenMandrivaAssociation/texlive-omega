@@ -1,12 +1,12 @@
-# revision 15878
+# revision 33046
 # category Package
 # catalog-ctan /systems/omega
-# catalog-date 2009-11-09 23:44:56 +0100
+# catalog-date 2012-12-31 10:37:50 +0100
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-omega
-Version:	20091109
-Release:	6
+Version:	20121231
+Release:	1
 Summary:	A wide-character-set extension of TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/omega
@@ -201,6 +201,8 @@ developing Omega (and Aleph) ideas include Omega-2 and LuaTeX.
 %{_texmfdistdir}/omega/ocp/char2uni/inviet1.ocp
 %{_texmfdistdir}/omega/ocp/char2uni/inviet2.ocp
 %{_texmfdistdir}/omega/ocp/char2uni/inviscii.ocp
+%{_texmfdistdir}/omega/ocp/misc/ebcdic.ocp
+%{_texmfdistdir}/omega/ocp/misc/id.ocp
 %{_texmfdistdir}/omega/ocp/omega/7arb2uni.ocp
 %{_texmfdistdir}/omega/ocp/omega/7ber2uni.ocp
 %{_texmfdistdir}/omega/ocp/omega/7cyr2uni.ocp
@@ -306,6 +308,8 @@ developing Omega (and Aleph) ideas include Omega-2 and LuaTeX.
 %{_texmfdistdir}/omega/otp/char2uni/inviet1.otp
 %{_texmfdistdir}/omega/otp/char2uni/inviet2.otp
 %{_texmfdistdir}/omega/otp/char2uni/inviscii.otp
+%{_texmfdistdir}/omega/otp/misc/ebcdic.otp
+%{_texmfdistdir}/omega/otp/misc/id.otp
 %{_texmfdistdir}/omega/otp/omega/7arb2uni.otp
 %{_texmfdistdir}/omega/otp/omega/7ber2uni.otp
 %{_texmfdistdir}/omega/otp/omega/7cyr2uni.otp
@@ -394,17 +398,3 @@ developing Omega (and Aleph) ideas include Omega-2 and LuaTeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips fonts omega tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20091109-2
-+ Revision: 754547
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20091109-1
-+ Revision: 719160
-- texlive-omega
-- texlive-omega
-- texlive-omega
-- texlive-omega
-
