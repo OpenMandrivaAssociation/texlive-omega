@@ -5,8 +5,8 @@
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-omega
-Version:	20121231
-Release:	5
+Version:	20170414
+Release:	1
 Summary:	A wide-character-set extension of TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/omega
