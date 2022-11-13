@@ -1,18 +1,12 @@
-# revision 33046
-# category Package
-# catalog-ctan /systems/omega
-# catalog-date 2012-12-31 10:37:50 +0100
-# catalog-license gpl
-# catalog-version undef
 Name:		texlive-omega
-Version:	20190228
+Version:	33046
 Release:	1
 Summary:	A wide-character-set extension of TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/omega
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/omega.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/omega.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/omega.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/omega.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ the aleph project (though that too has stalled). Projects
 developing Omega (and Aleph) ideas include Omega-2 and LuaTeX.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -391,7 +385,7 @@ developing Omega (and Aleph) ideas include Omega-2 and LuaTeX.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
