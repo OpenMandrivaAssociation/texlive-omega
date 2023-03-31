@@ -1,6 +1,6 @@
 Name:		texlive-omega
 Version:	33046
-Release:	1
+Release:	2
 Summary:	A wide-character-set extension of TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/omega
