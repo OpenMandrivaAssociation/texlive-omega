@@ -3,7 +3,7 @@ Version:	33046
 Release:	2
 Summary:	A wide-character-set extension of TeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/systems/omega
+URL:		https://www.ctan.org/tex-archive/systems/omega
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/omega.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/omega.doc.r%{version}.tar.xz
