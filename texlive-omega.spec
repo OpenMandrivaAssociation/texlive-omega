@@ -12,7 +12,8 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/omega.r%{tl_revi
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/omega.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 A development of TeX, which deals in multi-octet Unicode characters, to
@@ -22,3 +23,10 @@ only support files); its compatible successor is aleph, which is itself
 also in major maintenance mode only. Ongoing projects developing Omega
 (and Aleph) ideas include Omega-2 and LuaTeX.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from omega:
+Map omega.map
+TL_DROPIN_EOF
